@@ -14,10 +14,10 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# Enable CORS so our frontend can communicate with this API
+# Enable CORS so our frontend (localhost, Vercel, etc.) can communicate with this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origin_regex=r"https?://(localhost|127\.0\.0\.1)(:\d+)?",
+    allow_origin_regex=r"https?://.*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

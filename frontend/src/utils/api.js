@@ -1,4 +1,5 @@
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
+const rawBackendUrl = (import.meta.env.VITE_BACKEND_URL || import.meta.env.NEXT_PUBLIC_BACKEND_URL || '').trim();
+const BACKEND_URL = rawBackendUrl.replace(/\/+$/, '');
 
 /**
  * Helper to get active JWT Auth token from localStorage
