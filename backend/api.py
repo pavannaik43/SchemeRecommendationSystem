@@ -17,11 +17,11 @@ app = FastAPI(
 # Enable CORS so our frontend (localhost, Vercel, etc.) can communicate with this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origin_regex=r"https?://.*",
-    allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Initialize the AI Engine when the server starts
 engine = AIEngine()
