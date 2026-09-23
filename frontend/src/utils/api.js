@@ -1,4 +1,5 @@
-const rawBackendUrl = (import.meta.env.VITE_BACKEND_URL || import.meta.env.NEXT_PUBLIC_BACKEND_URL || '').trim();
+const DEFAULT_RAILWAY_URL = 'https://schemerecommendationsystem-production-1c84.up.railway.app';
+const rawBackendUrl = (import.meta.env.VITE_BACKEND_URL || import.meta.env.NEXT_PUBLIC_BACKEND_URL || DEFAULT_RAILWAY_URL).trim();
 const BACKEND_URL = rawBackendUrl.replace(/\/+$/, '');
 
 /**
